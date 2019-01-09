@@ -78,6 +78,8 @@ namespace Exam1.Migrations.ApplicationDbMigrations
                     RoleID = 2
                 });
 
+            context.SaveChanges();
+
             ApplicationUser lecturer = manager.FindByEmail("paul.powwel@itsligo.ie");
             if (lecturer != null)
             {
@@ -98,6 +100,8 @@ namespace Exam1.Migrations.ApplicationDbMigrations
             {
                 manager.AddToRoles(student.Id, new string[] { "Student" });
             }
+
+            context.SaveChanges();
         }
     }
 }
