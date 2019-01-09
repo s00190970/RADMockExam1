@@ -1,0 +1,26 @@
+﻿@model Exam1.Models.Subject
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Subject</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SubjectName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubjectName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", null, new { id = Model.SubjectID }, new { @class = "btn btn-warning btn-xs" })
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-primary btn-xs" })
+</p>

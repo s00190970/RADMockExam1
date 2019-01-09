@@ -1,0 +1,26 @@
+﻿@model Exam1.Models.Lecturer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Lecturer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LecturerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LecturerName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LecturerID }, new { @class = "btn btn-warning btn-xs"}) 
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-primary btn-xs" })
+</p>

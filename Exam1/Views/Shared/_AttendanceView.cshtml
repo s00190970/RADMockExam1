@@ -1,0 +1,6 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated && User.IsInRole("Lecturer"))
+{
+<li>@Html.ActionLink("Attendances", "Index", "Attendances")</li>
+}
+
