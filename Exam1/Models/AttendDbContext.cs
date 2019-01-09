@@ -16,6 +16,10 @@ namespace Exam1.Models
         {
             return new AttendDbContext();
         }
+        public AttendDbContext() : base("Exam1.Models.AttendDbContext")
+        {
+
+        }
     }
 
     
